@@ -17,4 +17,5 @@ steps:
 
 - script: |
     npm install
+    make deploy creation marketing_Local 10 USA 2023-12-28T22:13:59+0000
   displayName: 'npm install and build'

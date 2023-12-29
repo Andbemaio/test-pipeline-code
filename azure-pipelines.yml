@@ -6,6 +6,20 @@
 trigger:
 - main
 
+parameters:
+  - name: 'tenant_process_type'
+    type: string
+  - name: 'tenant_name'
+    type: string
+  - name: 'tenant_size'
+    type: number
+  - name: 'tenant_name'
+    type: string
+  - name: 'tenant_localization'
+    type: string
+  - name: 'tenant_initial_date'
+    type: string
+
 pool:
   name: Default
 
@@ -17,5 +31,5 @@ steps:
 
 - script: |
     npm install
-    make deploy creation marketing_Local 10 USA 2023-12-28
+    make deploy ${{ parameters.tenant_process_type }} ${{ parameters.tenant_name }} ${{ parameters.tenant_size }} ${{ parameters.tenant_localization }} ${{ parameters.tenant_initial_date }}
   displayName: 'npm install and build'

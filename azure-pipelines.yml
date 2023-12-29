@@ -13,8 +13,6 @@ parameters:
     type: string
   - name: 'tenant_size'
     type: number
-  - name: 'tenant_name'
-    type: string
   - name: 'tenant_localization'
     type: string
   - name: 'tenant_initial_date'

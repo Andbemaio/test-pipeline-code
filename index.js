@@ -1,21 +1,9 @@
-
-    const tenantName = process.env.TENANTNAME;
-
-    const tenantInitDate = process.env.TENANTINITDATE;
-
-    const tenantLocalization = process.env.TENANTLOCALIZATION;
-
-    const tenantSize = process.env.TENANTSIZE;
-
-    const typeCode = process.env.TYPE;
+    const tenantId = process.env.TENANT_ID;
     response = {
         'statusCode': 200,
-        'type': typeCode,
+        'type': 'Create',
         'body': {
-            'tenant_name': tenantName,
-            'tenant_size': tenantSize,
-            'tenant_localization': tenantLocalization,
-            'tenant_initial_date': tenantInitDate,
+            'tenant_id': tenantId,
         }
     }
     console.log(response)

@@ -7,15 +7,7 @@ trigger:
 - main
 
 parameters:
-  - name: 'tenant_process_type'
-    type: string
-  - name: 'tenant_name'
-    type: string
-  - name: 'tenant_size'
-    type: number
-  - name: 'tenant_localization'
-    type: string
-  - name: 'tenant_initial_date'
+  - name: 'tenant_id'
     type: string
 
 pool:
@@ -29,5 +21,5 @@ steps:
 
 - script: |
     npm install
-    make deploy ${{ parameters.tenant_process_type }} ${{ parameters.tenant_name }} ${{ parameters.tenant_size }} ${{ parameters.tenant_localization }} ${{ parameters.tenant_initial_date }}
+    make deploy ${{ parameters.tenant_id }}
   displayName: 'npm install and build'

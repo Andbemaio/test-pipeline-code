@@ -7,12 +7,15 @@
 
 ## **************** General Variables **************** ##
 arg1 := $(word 2,$(MAKECMDGOALS))
+arg2 := $(word 3,$(MAKECMDGOALS))
 
 ## ********** Environments where it can run ********** ##
 .PHONY: $(word 2,$(MAKECMDGOALS))
+.PHONY: $(word 3,$(MAKECMDGOALS))
 
 ## ************** Variables by Project *************** ##
 export TENANT_ID=$(arg1)
+export TENANT_NAME=$(arg2)
 
 ## ************ Local Environment ************* ##
 deploy: 
